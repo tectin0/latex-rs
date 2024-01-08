@@ -110,6 +110,7 @@ mod document;
 mod equations;
 mod lists;
 mod paragraph;
+mod references;
 mod section;
 mod visitor;
 
@@ -120,3 +121,5 @@ pub use paragraph::{Paragraph, ParagraphElement};
 pub use section::Section;
 
 pub use visitor::{print, Visitor};
+
+pub use references::{Bibliography, Citation, CitationType, Citations, Cite};
