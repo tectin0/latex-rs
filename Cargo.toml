@@ -10,6 +10,15 @@ homepage = "https://github.com/Michael-F-Bryan/latex-rs"
 repository = "https://github.com/Michael-F-Bryan/latex-rs"
 documentation = "https://docs.rs/latex"
 categories = ["template-engine", "text-processing"]
+autoexamples = true
 
 [dependencies]
 failure = "0.1.5"
+tectonic = { version = "0.14.1", features = ["external-harfbuzz"], optional = true}
+
+[features]
+tectonic = ["dep:tectonic"]
+
+[[example]]
+name = "tectonic"
+required-features = ["tectonic"]

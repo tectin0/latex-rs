@@ -120,3 +120,9 @@ pub use paragraph::{Paragraph, ParagraphElement};
 pub use section::Section;
 
 pub use visitor::{print, Visitor};
+
+#[cfg(feature = "tectonic")]
+extern crate tectonic;
+
+#[cfg(feature = "tectonic")]
+pub use tectonic::latex_to_pdf;
